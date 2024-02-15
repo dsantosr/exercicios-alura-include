@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    escreveCabecalho("2° Exercício");
+
+    var inteiro = 7;
+    var decimal = 3.5;
+    escreveConsole(`Inteiro = ${inteiro}, Decimal = ${decimal}`);
+    
+    var adicao = inteiro + decimal;
+    escreveConsole(`Resultado da adição "inteiro + decimal": ${adicao}`); 
+
+    var subtracao = inteiro - decimal;
+    escreveConsole(`Resultado da subtracao "inteiro - decimal": ${subtracao}`); 
+
+    var potenciacao = (adicao - .5) ** 2;
+    escreveConsole(`Resultado da potenciacao "(adicao - .5) ** 2": ${potenciacao}`); 
+
+    var expressao1 = inteiro - 4/2/2;
+    escreveConsole(`Resultado da expressão "inteiro - 4/2/2": ${expressao1}`); 
+
+    var expressao2 = (inteiro - 4) / 2;
+    escreveConsole(`Resultado da expressão "(inteiro - 4) / 2": ${expressao2}`);
+
+    escreveTexto("Verifique o console.");
+</script>

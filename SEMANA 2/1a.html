@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    escreveCabecalhoH1("1° Exercício.");
+    escreveCabecalhoH2("1. Mostre os números de 1 a 50 na tela, dizendo se é par ou ímpar.");
+    for(let i = 1; i <= 50; i++){
+        if(i%2==0){
+            escreveTexto(`${i} é um número par.`);
+        } else { 
+            escreveTexto(`${i} é um número ímpar.`)
+        }
+    }
+    escreveCabecalhoH2("2. Mostre apenas os múltiplos de 3 entre 1 e 100.");
+    for(let i = 1; i <= 100; i++){
+        if(i%3==0){
+            escreveTexto(`${i} é múltiplo de 3.`);
+        } else { 
+            escreveTexto(`${i} não é múltiplo de 3.`)
+        }
+    }
+    escreveCabecalhoH2("3. Mostre a seguinte sequência: de 100 até 0, pulando de dois em dois (100 98 96 94 92 ... 6 4 2 0). ");
+    for(let i = 100; i >=0; i--){
+        if(i%2==0){
+            document.write(`${i} `);
+        }
+    }
+
+</script>

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script> 
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    exibeCabecalho("8° Exercício");
+    var idadeDoUsuario = parseInt(prompt('Informe a sua idade.'));
+
+    if(idadeDoUsuario < 16){
+        exibeTexto('Idade insuficiente para votar.');
+    } else if (idadeDoUsuario >= 18 && idadeDoUsuario <= 70){
+        exibeTexto('Voto obrigatório.');
+    } else {
+        exibeTexto('Voto opcional');
+    }
+    
+</script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    
+    escreveCabecalho("1° Exercício");
+
+    var nome = "Daniel dos Santos Rodrigues";
+    var telefone = "+55 (98) 94664-8329";
+    var temConvenio = true;
+    var profissao = "SENIOR BACK-END DEVELOPER";
+    var salario = 87000.0;
+
+    escreveTexto(`Nome: ${nome}`);
+    escreveTexto(`Telefone: ${telefone}`);
+    escreveTexto(`Convênio: ${((temConvenio)? "Possui":"Não Possui")}`);
+    escreveTexto(`Profissão:: ${profissao}`);
+    escreveTexto(`Salário: ${salario}`);
+
+</script>

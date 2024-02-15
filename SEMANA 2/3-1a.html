@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    escreveCabecalhoH1("3° 1 Exercício.");
+
+    var somaNotas = 0;
+    var contadorAlunos = 0;
+    
+    do{
+        var entradaUsuario = prompt("Insira as notas de seus alunos. Quando acabar digite “SAIR");
+        if(entradaUsuario == "SAIR"){
+            break;
+        }
+        somaNotas += parseFloat(entradaUsuario);
+        contadorAlunos++;
+    } while(true);
+    
+    var mediaAlunos = somaNotas / contadorAlunos;
+    alert(`Média da turma: ${mediaAlunos.toFixed(2)}`);
+</script>

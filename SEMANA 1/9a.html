@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    escreveCabecalho("9° Exercício");
+    escreveTexto("Verifique o console.");
+
+    //Dados
+    var destinos = ['Nova Zelândia', 'Tailândia', 'Costa Rica'];
+    var custosPassagem = [13996, 9160, 5119];
+    var custosDiariaHotel = [79.15, 590, 2300];
+    var custosGuiaLocal = [200, 235, 3150];
+    var cotacaoNZ = 3.25;
+    var cotacaoTHB = 0.15;
+    var cotacaoCRC = 0.0089;
+    var cotacoes = [cotacaoNZ, cotacaoTHB, cotacaoCRC];
+
+    for(var i = 0; i < destinos.length; i++){
+        
+        var destino = destinos[i];
+        var custoPassagemAerea = custosPassagem[i];
+        var cotacao = cotacoes[i];
+        var custoDiariaHotelReais = (custosDiariaHotel[i]*cotacao).toFixed(2);
+        var custoGuiaLocalReais = (custosGuiaLocal[i]*cotacao).toFixed(2);
+
+        escreveConsole(`Destino: ${destino}`);
+        escreveConsole(`Passagens aéreas: R$ ${custoPassagemAerea}`);
+        escreveConsole(`Diária Hotel: R$ ${custoDiariaHotelReais}`);
+        escreveConsole(`Guia Local: R$ ${custoGuiaLocalReais}`);
+        escreveConsole(``);
+    }
+    
+</script>

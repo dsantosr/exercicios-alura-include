@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    //Dados
+    var destinos = [];
+    var escolhaDias = [];
+    var cotacoes = [];
+    var custosPassagem = [];
+    var custosDiariaHotel = [];
+    var custosGuia = [];
+    var custosTotais = [];
+
+
+    escreveCabecalhoH1("10° Exercício");
+    var nomeCliente = prompt("Informe seu nome:");
+    do {
+        destinos.push(prompt(`Informe o nome do destino: `));
+        let ultimoIndice = destinos.length-1;
+
+        escolhaDias.push(parseInt(prompt(`Informe a quantidade de dias que deseja viajar: `)));
+        cotacoes.push(parseFloat(prompt('Informe a cotação da moeda do país de destino: ')));
+        custosPassagem.push(parseFloat(prompt('Informe o valor da passagem (R$): ')));
+        custosDiariaHotel.push((parseFloat(prompt('Informe o valor da diária do hotel: '))*escolhaDias[ultimoIndice]*cotacoes[ultimoIndice]));
+        custosGuia.push((parseFloat(prompt('Informe o valor do guia local: '))*escolhaDias[ultimoIndice]*cotacoes[ultimoIndice]));
+        custosTotais.push((custosPassagem[ultimoIndice] + custosDiariaHotel[ultimoIndice] + custosGuia[ultimoIndice]));
+
+        let cotinuarLoop = prompt('Desejas adcionar mais um país de destino? Sim:S/Não:N');
+        if(cotinuarLoop == 'N'){
+            break;
+        }
+    } while (true);
+
+    document.write(`Olá ${nomeCliente}! É um prazer termos você como cliente e estamos ansiosos para que sua viagem possa ocorrer em breve! <br>
+    Estou te encaminhando os orçamentos! <br>`);
+    for(let i = 0 ; i < destinos.length; i++){
+        escreveTexto(`
+        *   ${destinos[i]}  *<br>
+        Passagens: R$ ${custosPassagem[i].toFixed(2)}<br>
+        Acomodação (${escolhaDias[i]}`+ (escolhaDias[i]>1 ? ' dias':' dias') + `) de R$ ${custosDiariaHotel[i].toFixed(2)}<br>
+        O guia local custará ${custosGuia[i].toFixed(2)}<br>
+        Total R$ ${custosTotais[i].toFixed(2)}!<br>
+        ---<br>`);
+    }
+    
+</script>

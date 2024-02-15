@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    escreveCabecalhoH1("9° Exercício.");
+    var qtdLetras = 10;
+    alert(`Escreva ${qtdLetras} letras.`);
+    var letras = [];
+    for(var i = 1; i <= qtdLetras; i++){
+        var letraAux = prompt(`Escreva a ${i}ª letra: `); 
+        letras.push(letraAux);
+    }
+
+    escreveConsole(`A primeira letra da lista é: ${letras[0]}`);
+    escreveConsole(`A quarta letra da lista é: ${letras[3]}`);
+    escreveConsole(`A quinta letra da lista é: ${letras[4]}`);
+    escreveConsole(`A última letra da lista é: ${letras[qtdLetras-1]}`);
+    escreveConsole(`O tamanho da lista é: ${letras.length}`);
+    
+    escreveTexto("Verifique o console.");
+
+</script>

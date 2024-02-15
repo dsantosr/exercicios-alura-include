@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    // Dados do exercício
+    var user = "Jéssica";
+    var cidades = ["Belo Horizonte","São Paulo","Salvador","Campo Grande","Curitiba"];
+    var clientes = [23, 12, 11, 10, 8];
+    var faturamento = [2950.0, 3950.0, 1329.0, 2412.0, 626.0];
+    var faturamentoMedioPorCliente = [];
+
+    escreveCabecalho("5° Exercício");
+    escreveTexto("Faturamento médio por cliente: ");
+
+    for(var i=0; i<cidades.length; i++){
+        var faturamentoMedioPorCliente = Math.round(faturamento[i]/clientes[i]);
+        escreveTexto( cidades[i] + ": R$ " + faturamentoMedioPorCliente);
+    }
+    
+</script>

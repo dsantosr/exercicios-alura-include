@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    function cadastrarPet(nomePet, especiePET, corPet){
+        escreveConsole(`Pet cadastrado. Nome: ${nomePet}, Cor: ${corPet}`);
+    }
+    escreveCabecalhoH1("7° Exercício.");
+    alert('Insira as informações do PET para realizar o cadastro. ')
+
+    do{
+        var nomePet = prompt(`Nome do PET:`);
+        var especiePET = prompt('Espécie do PET:');
+        var corPet = prompt(`Informe a cor do(a) ${nomePet}:`);
+
+        cadastrarPet(nomePet, especiePET, corPet);
+        var escolhaUsuario = prompt('Desejas cadastrar mais um PET? Sim:S/Não:N');
+        if(escolhaUsuario == 'N'){
+            break;
+        }
+    } while (true);
+    
+    escreveTexto('Verifique o Console');
+</script>

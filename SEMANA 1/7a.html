@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script> 
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    exibeCabecalho('7° Exercício');
+    var raioPiscina = parseFloat(prompt('Informe o raio da base da piscina.'));
+    var alturaPiscina = parseFloat(prompt('Informe a altura da piscina.'));
+
+    var areaBasePiscina = Math.PI * Math.pow(raioPiscina, 2);
+    var volumePiscina = areaBasePiscina * alturaPiscina;
+    var volumeLitrosPiscina = (volumePiscina * 1000).toFixed(2);
+
+    var mensagemResultado = `A piscina possui ${volumeLitrosPiscina}L de capacidade`;
+    exibeTexto(mensagemResultado);
+</script>

@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    escreveCabecalho("3° Exercício");
+
+    var a = 100;
+    var b = 200;
+    escreveTexto(`a = ${a}, b = ${b}`);
+    [a, b] = [b, a];
+    escreveTexto(`a = ${a}, b = ${b}`);
+    escreveTexto('Saiba mais sobre atribuição via desestruturação <a href=https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment>aqui<a>.')
+</script>

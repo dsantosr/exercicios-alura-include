@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    //Dados
+    var destinos = ['Nova Zelândia', 'Tailândia', 'Costa Rica'];
+    var custosPassagem = [13996, 9160, 5119];
+    var custosDiariaHotel = [79.15, 590, 2300];
+    var custosGuia = [200, 235, 3150];
+    var cotacaoNZ = 3.25;
+    var cotacaoTHB = 0.15;
+    var cotacaoCRC = 0.0089;
+    var cotacoes = [cotacaoNZ, cotacaoTHB, cotacaoCRC];
+
+    escreveCabecalho("10° Exercício");
+    var nomeCliente = prompt("Informe seu nome:");
+    var escolhaDestino = parseInt(prompt(`Escolha um destino (1) ${destinos[0]}, (2) ${destinos[1]}, (3) ${destinos[2]}:`));
+    var escolhaDias = parseInt(prompt(`Informe a quantidade de dias que deseja viajar:`));
+
+    var destino = destinos[escolhaDestino];
+    var cotacao = cotacoes[escolhaDestino];
+    var custoPassagem = custosPassagem[escolhaDestino];
+    var custoDiariaHotel = (custosDiariaHotel[escolhaDestino]*cotacao).toFixed(2);
+    var custoGuia = (custosGuia[escolhaDestino]*cotacao).toFixed(2);
+    var custoPorDia = custoPassagem + custoDiariaHotel*escolhaDias + custoGuia*escolhaDias;
+    var custoTotal = (custoPorDia*escolhaDias).toFixed(2);
+
+    escreveTexto(`Olá ${nomeCliente}! É um prazer termos você como cliente e estamos ansiosos para que sua viagem para ${destino} possa ocorrer em breve!`);
+    escreveTexto(`Estou te encaminhando os custos:`);
+    escreveTexto(`As passagens ficarão em torno de R$ ${custoPassagem}, os custos para a acomodação de ${escolhaDias} ` +((escolhaDias>1)? "dias ":"dia ")+ `serão de R$ ${custoDiariaHotel}.`);
+    escreveTexto(`O guia local custará ${custoGuia}.`);
+    escreveTexto(`Sua viagem custará R$ ${custoTotal}!`);
+
+</script>

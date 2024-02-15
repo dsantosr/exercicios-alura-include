@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    escreveCabecalhoH1("6° Exercício.");
+
+    function inserirNotas(nomeEstudante, disciplina, notaProva, notaTrabalho) {
+        var mediaAluno = (notaProva+notaTrabalho) / 2;
+        
+        if(mediaAluno < 7){
+            alert(`Nome do aluno: ${nomeEstudante}
+            Disciplina abaixo da média: ${disciplina}
+            Média do bimestre nesta disciplina: ${mediaAluno}`);
+        } else {
+            alert(`O aluno: ${nomeEstudante} passou na disciplina ${disciplina}`);
+        }
+    }
+
+    
+    do{
+        var nomeDisciplina = prompt(`
+        Insira as informações para o lançamento da nota. Digite SAIR para encerrar o programa.
+        Nome da disciplina:`);
+    
+        if(nomeDisciplina == 'SAIR'){
+            break;
+        }
+
+        var nomeAluno = prompt('Nome do Aluno:');
+        var notaProva = parseFloat(prompt(`Informe a nota do(a) ${nomeAluno} na prova de ${nomeDisciplina}:`));
+        var notaTrabalho = parseFloat(prompt(`Informe a nota do(a) ${nomeAluno} no trabalho de ${nomeDisciplina}:`));
+        inserirNotas(nomeAluno, nomeDisciplina, notaProva, notaTrabalho);
+
+    } while (true);
+    
+    
+</script>

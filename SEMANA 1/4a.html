@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    function somaLista(lista){
+        let total = 0;
+        lista.forEach( num => {
+            total += num;
+        })
+        return total;
+    }
+
+    // Dados do exercício
+    var user = "Jéssica";
+    var cidades = ["Belo Horizonte","São Paulo","Salvador","Campo Grande","Curitiba"];
+    var clientes = [23, 12, 11, 10, 8];
+    var faturamento = [2950.0, 3950.0, 1329.0, 2412.0, 626.0];
+    var faturamentoMedioPorCliente = [];
+
+    escreveCabecalho("4° Exercício");
+    totalClientes = somaLista(clientes);
+    document.write(`Nas capitais de BH, SP, BA, MS e PR, ${user} possui ${totalClientes} clientes`);
+    
+</script>

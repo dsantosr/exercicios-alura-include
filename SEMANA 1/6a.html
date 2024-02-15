@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalho(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    escreveCabecalho("6° Exercício");
+
+    var baseRetangulo = parseFloat(prompt('Informe a base do retângulo.'));
+    var alturaRetangulo = parseFloat(prompt('Informe a altura do retângulo.'));
+
+    var raioCirculo = parseFloat(prompt('Informe o raio do círculo.'));
+
+    var alturaTriangulo = parseFloat(prompt('Informe a altura do triângulo.'));
+    var baseTriangulo = parseFloat(prompt('Informe a base do triângulo.'));
+    
+    var areaRetangulo = baseRetangulo * alturaRetangulo;
+    var areaCirculo = Math.PI * (raioCirculo**2);
+    var areaTriangulo = baseTriangulo * alturaTriangulo / 2;
+
+    escreveTexto(`O retângulo possui ${areaRetangulo.toFixed(2)} de área.`);
+    escreveTexto(`O círculo possui ${areaCirculo.toFixed(2)} de área.`);
+    escreveTexto(`O triângulo possui ${areaTriangulo.toFixed(2)} de área.`);
+
+</script>

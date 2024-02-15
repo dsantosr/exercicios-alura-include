@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    escreveCabecalhoH1("3° 2 Exercício.");
+
+    class Aluno {
+        constructor(nome, notaLP, notaMTM) {
+            this.nome = nome;
+            this.notaLP = notaLP;
+            this.notaMTM = notaMTM;
+        }
+    }
+
+    function escolherLider(aluno1, aluno2, aluno3, ) {
+        if (aluno.notaLP > aluno2.notaLP && aluno1.notaLP > aluno3.notaLP) {
+            return aluno1;
+        } else if (aluno2.notaLP > aluno1.notaLP && aluno2.notaLP > aluno3.notaLP) {
+            return aluno2;
+        } else if (aluno3.notaLP > aluno1.notaLP && aluno3.notaLP > aluno2.notaLP) {
+            return aluno3;
+        } else if (aluno1.notaLP === aluno2.notaLP && aluno1.notaLP > aluno3.notaLP) {
+            if (aluno1.notaMTM > aluno2.notaMTM) {
+            return aluno1;
+            } else {
+            return aluno2;
+            }
+        } else if (aluno1.notaLP === aluno3.notaLP && aluno1.notaLP > aluno2.notaLP) {
+            if (aluno1.notaMTM > aluno3.notaMTM) {
+            return aluno1;
+            } else {
+            return aluno3;
+            }
+        } else if (aluno2.notaLP === aluno3.notaLP && aluno2.notaLP > aluno1.notaLP) {
+            if (aluno2.notaMTM > aluno3.notaMTM) {
+            return aluno2;
+            } else {
+            return aluno3;
+            }
+        } else {
+            return "Não foi possível escolher um líder. Por favor, verifique as notas e tente novamente.";
+        }
+    }
+
+
+    var aluno1 = new Aluno("Daniel", 8.7, 9.3);
+    var aluno2 = new Aluno("Daniel", 8.7, 9.7);
+    var aluno3 = new Aluno("Daniel", 7.3, 8.1);
+
+    escreveTexto(escolheLider(aluno1, aluno2, aluno3).nome);
+    
+</script>

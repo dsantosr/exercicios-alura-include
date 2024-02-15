@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+
+    escreveCabecalhoH1("11° Exercício.");
+    var senhaDoCartao = '123';
+    var chaveSegurança = '9999';
+
+    function verificarSenha(senhaDoCartao){
+        let senhaInformada = prompt('Insira a senha do cartão.');
+        for(let i = 2; i>0; i--){
+            if(senhaDoCartao == senhaInformada){
+                return true;
+            } else {
+                senhaInformada = prompt(`Senha incorreta. Você tem mais ${i} tentativas. Tente novamente: `);
+            }
+        }
+        return false;
+    }
+
+    function desbloquearCartao(){
+        var escolhaUsuario;
+        do{
+            escolhaUsuario = prompt("Senha incorreta. Seu cartão foi bloqueado. Se deseja ir a uma agência, digite “A” ou se deseja desbloquear com sua chave de segurança, digite “D”.");
+        } while (escolhaUsuario != "A" && escolhaUsuario != "D");
+        
+        if(escolhaUsuario == "A"){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validarChaveSeguranca(chaveSegurança){
+        escolhaUsuario = prompt("Informe a chave de segurança que foi enviada para seu email.");
+        if(escolhaUsuario == chaveSegurança){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function validarSenhaCartao(senhaDoCartao, chaveSegurança){
+        if(verificarSenha(senhaDoCartao)){
+            return true;
+        } else {
+            if(desbloquearCartao() && validarChaveSeguranca(chaveSegurança)){
+                senhaDoCartao = prompt("Informe a nova senha.");
+                return validarSenhaCartao(senhaDoCartao, chaveSegurança);
+            } else {
+                return false;
+            }
+        }
+    }
+    
+    if(validarSenhaCartao(senhaDoCartao, chaveSegurança)){
+        alert('Compra aprovada.');
+    } else {
+        alert("Vá até a agência mais próxima e desbloqueie seu cartão.");
+    }
+    
+</script>

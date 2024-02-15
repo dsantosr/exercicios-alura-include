@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+    // Funções auxiliares
+    function escreveCabecalhoH1(texto){
+        document.write(`<h1> ${texto} </h1>`);
+    }
+    function escreveCabecalhoH2(texto){
+        document.write(`<h2> ${texto} </h2>`);
+    }
+    function escreveTexto(texto){
+        document.write(`${texto} <br>`);
+    }
+    function escreveConsole(texto){
+        console.log(texto);
+    }
+    escreveCabecalhoH1("2° Exercício.");
+
+    var numeroDivisor = 4;
+    var range = 40;
+    for(var i = 1; i <= 40; i++){
+        if(i%numeroDivisor==0){
+            document.write(i==range ? "PIM ":"PIM, ");
+        } else {
+            document.write(i==range ? `${i} `:`${i}, `);
+        }
+    }
+    document.write(`!`);
+
+</script>
