@@ -1,3 +1,3 @@
-# exercicios-alura-include
+# Exercícios Alura Include.
 
-<h1> Exercícios propostos nas semanas iniciais da formação Alura Include. </h1>
+<h1> Respostas dos exercícios propostos nas semanas 1 e 2 da formação Alura Include </h1>
